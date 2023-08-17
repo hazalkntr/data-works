@@ -44,3 +44,13 @@ print(predictions)
 
 #compare the top few predictions to the actual home values (in y) for those same homes
 y.head()
+
+from sklearn.model_selection import train_test_split
+
+train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = 1)
+
+# Specify the model
+iowa_model = DecisionTreeRegressor(random_state=1)
+
+# Fit iowa_model with the training data.
+iowa_model.fit(train_X, train_y)
