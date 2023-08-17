@@ -14,3 +14,18 @@ print("average lot size: ",avg_lot_size)
 print("newest home age: ",newest_home_age)
 
 melbourne_data.columns
+
+y = melbourne_data.Price
+print(y)
+
+# Create the list of features below
+feature_names = ["Rooms", "Price", "Bathroom", "Car", "YearBuilt"]
+
+# Select data corresponding to features in feature_names
+X = melbourne_data[feature_names]
+
+# print description or statistics from X
+print(X)
+
+# print the top few lines
+X.head()
